@@ -5,12 +5,11 @@ import { GlobalStyle } from './styles/global'
 
 export function App() {
   return (
-    <ThemeProvider theme={defaultTheme}> 
-      <Button variant='primary'/>
-      <Button variant='secundary'/>sadsadas
+    <ThemeProvider theme={defaultTheme}>
+      <Button variant="primary" />
+      <Button variant="secundary" />
 
       <GlobalStyle />
     </ThemeProvider>
   )
 }
-
