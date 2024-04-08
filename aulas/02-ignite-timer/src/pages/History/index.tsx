@@ -1,4 +1,4 @@
-import { HistoryContainer, HistoryList } from './style'
+import { HistoryContainer, HistoryList, Status } from './style'
 
 export function History() {
   return (
@@ -20,37 +20,49 @@ export function History() {
               <td>Tarefa 1</td>
               <td>30 minutos</td>
               <td>Há certca de 1 dia</td>
-              <td>Concluída</td>
+              <td>
+                <Status statusColor="green">Concluída</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa 1</td>
               <td>30 minutos</td>
               <td>Há certca de 1 dia</td>
-              <td>Concluída</td>
+              <td>
+                <Status statusColor="yellow">Em andamento</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa 1</td>
               <td>30 minutos</td>
               <td>Há certca de 1 dia</td>
-              <td>Concluída</td>
+              <td>
+                <Status statusColor="red">Incompleta</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa 1</td>
               <td>30 minutos</td>
               <td>Há certca de 1 dia</td>
-              <td>Concluída</td>
+              <td>
+                <Status statusColor="green">Concluída</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa 1</td>
               <td>30 minutos</td>
               <td>Há certca de 1 dia</td>
-              <td>Concluída</td>
+              <td>
+                <Status statusColor="green">Concluída</Status>
+              </td>
             </tr>
             <tr>
               <td>Tarefa 1</td>
               <td>30 minutos</td>
               <td>Há certca de 1 dia</td>
-              <td>Concluída</td>
+              <td>
+                <Status statusColor="green">Concluída</Status>
+              </td>
             </tr>
           </tbody>
         </table>
