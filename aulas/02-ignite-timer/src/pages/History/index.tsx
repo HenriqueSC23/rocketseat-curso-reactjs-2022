@@ -37,7 +37,7 @@ export function History() {
               <td>30 minutos</td>
               <td>Há certca de 1 dia</td>
               <td>
-                <Status statusColor="red">Incompleta</Status>
+                <Status statusColor="red">Interrompida</Status>
               </td>
             </tr>
             <tr>
