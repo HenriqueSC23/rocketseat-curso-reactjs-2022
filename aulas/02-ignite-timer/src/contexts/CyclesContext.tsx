@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import { ReactNode, createContext, useState } from 'react'
 
 interface CreateCycleData {
   task: string
@@ -66,11 +66,10 @@ export function CyclesContextProvider({
       startDate: new Date(),
     }
 
-    setCycles((state) => [...cycles, newCycle])
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    setCycles((_state) => [...cycles, newCycle])
     setActiveCycleId(id)
     setAmountSecondsPassed(0)
-
-    // reset()
   }
 
   function interruptCurrentCycle() {
