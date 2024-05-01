@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { defaultTheme } from '../../styles/themes/default'
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -22,14 +23,26 @@ const BaseButton = styled.button`
 `
 
 export const LocationButton = styled(BaseButton)`
-  background-color: ${(props) => props.theme['purple-light']};
-  color: ${(props) => props.theme.purple};
+  background-color: ${(props) => props.theme.colors['purple-light']};
+  color: ${(props) => props.theme.colors.purple};
+
+  p {
+    color: ${(props) => props.theme.colors['purple-dark']};
+  }
+
+  ${defaultTheme.fonts.textS}
 `
 
 export const CartButton = styled(BaseButton)`
-  background-color: ${(props) => props.theme['yellow-light']};
-  color: ${(props) => props.theme['yellow-dark']};
+  background-color: ${(props) => props.theme.colors['yellow-light']};
   position: relative;
+
+  svg {
+    color: ${(props) => props.theme.colors['yellow-dark']};
+    &.active {
+      color: ${(props) => props.theme.colors['yellow-dark']};
+    }
+  }
 
   span {
     position: absolute;
@@ -37,11 +50,11 @@ export const CartButton = styled(BaseButton)`
     right: 0px;
     transform: translate(50%, -50%);
 
-    background-color: ${(props) => props.theme['yellow-dark']};
+    background-color: ${(props) => props.theme.colors['yellow-dark']};
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.colors.white};
     font-size: 0.75rem;
 
     display: flex;
