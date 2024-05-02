@@ -14,6 +14,7 @@ export const InfoContainer = styled.div`
 
   h2 {
     ${defaultTheme.fonts.titleXS}
+    color: ${defaultTheme.colors['base-subtitle']};
   }
 `
 
@@ -25,6 +26,27 @@ export const CoffeeCard = styled.div`
   height: 28.625rem;
   background-color: ${defaultTheme.colors['base-card']};
   border-radius: 6px 44px 6px 44px;
+`
+
+export const Info = styled.div`
+  display: flex;
+  gap: 20px;
+`
+
+export const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+`
+
+export const Actions = styled.div`
+  display: flex;
+  gap: 8px;
+`
+
+export const Coffee = styled.img`
+  height: 64px;
+  width: 64px;
 `
 
 export const FormContainer = styled.div`
@@ -73,13 +95,6 @@ export const LocalHeader = styled(FormHeaderBase)`
     color: ${defaultTheme.colors['yellow-dark']};
   }
 `
-
-export const PaymentHeader = styled(FormHeaderBase)`
-  svg {
-    color: ${defaultTheme.colors.purple};
-  }
-`
-
 export const Form = styled.div`
   display: grid;
   grid-template-areas:
@@ -91,9 +106,22 @@ export const Form = styled.div`
   grid-gap: 16px 12px;
 `
 
+export const PaymentHeader = styled(FormHeaderBase)`
+  svg {
+    color: ${defaultTheme.colors.purple};
+  }
+`
+export const PaymentButtons = styled.div`
+  display: flex;
+  gap: 12px;
+`
+
 export const PaymentBox = styled.div`
   height: 13rem;
   background-color: ${defaultTheme.colors['base-card']};
   padding: 40px;
   border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 `

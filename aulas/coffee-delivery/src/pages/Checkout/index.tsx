@@ -1,16 +1,30 @@
-import { CurrencyDollar, MapPinLine } from '@phosphor-icons/react'
 import {
+  Bank,
+  CreditCard,
+  CurrencyDollar,
+  MapPinLine,
+  Money,
+} from '@phosphor-icons/react'
+import {
+  Actions,
+  Coffee,
   CoffeeCard,
+  Details,
   Form,
   FormContainer,
   GridContainer,
+  Info,
   InfoContainer,
   LocalBox,
   LocalHeader,
   PaymentBox,
+  PaymentButtons,
   PaymentHeader,
 } from './style'
 import { TextInput } from '../../components/Input/Index'
+import { PaymentButton } from '../../components/PaymentButton'
+import americano from '../../assets/coffees/Americano.png'
+import { QuantityInput } from '../../components/Form/QuantityInput'
 
 export function Checkout() {
   return (
@@ -77,13 +91,39 @@ export function Checkout() {
                 </p>
               </div>
             </PaymentHeader>
+
+            <PaymentButtons>
+              <PaymentButton>
+                <CreditCard size={16} />
+                <span>cartão de crédito</span>
+              </PaymentButton>
+              <PaymentButton>
+                <Bank size={16} />
+                <span>cartão de débito</span>
+              </PaymentButton>
+              <PaymentButton>
+                <Money size={16} />
+                <span>dinheiro</span>
+              </PaymentButton>
+            </PaymentButtons>
           </PaymentBox>
         </FormContainer>
       </InfoContainer>
 
       <InfoContainer>
         <h2>Cafés selecionados</h2>
-        <CoffeeCard></CoffeeCard>
+        <CoffeeCard>
+          <Info>
+            <Coffee src={americano} />
+
+            <Details>
+              <span>Expresso Tradicional</span>
+              <Actions>
+                <QuantityInput />
+              </Actions>
+            </Details>
+          </Info>
+        </CoffeeCard>
       </InfoContainer>
     </GridContainer>
   )
