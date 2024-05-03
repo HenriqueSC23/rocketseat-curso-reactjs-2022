@@ -4,12 +4,16 @@ import {
   CurrencyDollar,
   MapPinLine,
   Money,
+  Trash,
 } from '@phosphor-icons/react'
 import {
   Actions,
   Coffee,
   CoffeeCard,
+  CoffeeCardItem,
+  ConfirmBtn,
   Details,
+  Divider,
   Form,
   FormContainer,
   GridContainer,
@@ -20,6 +24,10 @@ import {
   PaymentBox,
   PaymentButtons,
   PaymentHeader,
+  Prices,
+  RemoveButton,
+  SubTotal,
+  Total,
 } from './style'
 import { TextInput } from '../../components/Input/Index'
 import { PaymentButton } from '../../components/PaymentButton'
@@ -113,16 +121,62 @@ export function Checkout() {
       <InfoContainer>
         <h2>Cafés selecionados</h2>
         <CoffeeCard>
-          <Info>
-            <Coffee src={americano} />
+          <CoffeeCardItem>
+            <Info>
+              <Coffee src={americano} />
 
-            <Details>
-              <span>Expresso Tradicional</span>
-              <Actions>
-                <QuantityInput />
-              </Actions>
-            </Details>
-          </Info>
+              <Details>
+                <span>Expresso Tradicional</span>
+                <Actions>
+                  <QuantityInput />
+                  <RemoveButton>
+                    <Trash size={16} />
+                    REMOVER
+                  </RemoveButton>
+                </Actions>
+              </Details>
+            </Info>
+            <strong>9.90</strong>
+          </CoffeeCardItem>
+
+          <Divider />
+
+          <CoffeeCardItem>
+            <Info>
+              <Coffee src={americano} />
+
+              <Details>
+                <span>Expresso Tradicional</span>
+                <Actions>
+                  <QuantityInput />
+                  <RemoveButton>
+                    <Trash size={16} />
+                    REMOVER
+                  </RemoveButton>
+                </Actions>
+              </Details>
+            </Info>
+            <strong>9.90</strong>
+          </CoffeeCardItem>
+
+          <Divider />
+
+          <Prices>
+            <SubTotal>
+              <p>Total de itens</p>
+              <span>R$19,80</span>
+            </SubTotal>
+            <SubTotal>
+              <p>Entrega</p>
+              <span>R$5,00</span>
+            </SubTotal>
+            <Total>
+              <p>Total</p>
+              <span>R$24,80</span>
+            </Total>
+          </Prices>
+
+          <ConfirmBtn>confirmar pedido</ConfirmBtn>
         </CoffeeCard>
       </InfoContainer>
     </GridContainer>

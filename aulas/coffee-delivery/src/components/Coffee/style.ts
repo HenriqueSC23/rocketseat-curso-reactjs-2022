@@ -2,21 +2,28 @@ import styled from 'styled-components'
 import { defaultTheme } from '../../styles/themes/default'
 
 export const CoffeeCard = styled.div`
-  width: 16rem;
-  height: 19.375rem;
   background-color: ${(props) => props.theme.colors['base-card']};
-  border-radius: 6px 36px 6px 36px;
-  text-align: center;
+  padding: 0 20px 20px 20px;
+  border-radius: 6px 36px;
+  width: 256px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  text-align: center;
+`
+
+export const Tags = styled.div`
+  display: flex;
+  align-self: center;
+  gap: 4px;
 `
 
 export const CoffeeImg = styled.img`
   margin-top: -20px;
   width: 120px;
   height: 120px;
+  align-self: center;
 `
 
 export const CoffeTag = styled.div`
@@ -26,12 +33,14 @@ export const CoffeTag = styled.div`
   margin-top: 12px;
 
   display: flex;
+  gap: 4px;
   align-items: center;
-  justify-content: center;
+  align-self: center;
 
   span {
     color: ${defaultTheme.colors['yellow-dark']};
     ${defaultTheme.fonts.tag};
+    text-transform: uppercase;
   }
 `
 
@@ -48,7 +57,18 @@ export const CoffeeDescription = styled.p`
   margin-top: 8px;
 `
 
+export const BuyContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 32px;
+`
+
 export const Price = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
   color: ${defaultTheme.colors['base-text']};
 
   span:first-child {
@@ -59,9 +79,28 @@ export const Price = styled.div`
   }
 `
 
-export const BuyContainer = styled.div`
+export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  margin-top: 36px;
+  align-items: center;
+  gap: 8px;
+`
+
+export const BuyButton = styled.button`
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${defaultTheme.colors.purple};
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  svg {
+    color: ${defaultTheme.colors.white};
+  }
+
+  &:hover {
+    background-color: ${defaultTheme.colors['purple-dark']};
+  }
 `
