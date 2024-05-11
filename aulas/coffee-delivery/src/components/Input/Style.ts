@@ -10,6 +10,10 @@ export const Container = styled.div`
   border: 1px solid ${defaultTheme.colors['base-button']};
   background-color: ${defaultTheme.colors['base-input']};
 
+  &[data-state='fucused'] {
+    border-color: ${defaultTheme.colors['yellow-dark']};
+  }
+
   span {
     color: ${defaultTheme.colors['base-label']};
     font-style: italic;

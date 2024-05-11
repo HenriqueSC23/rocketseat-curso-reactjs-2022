@@ -31,7 +31,6 @@ export const CoffeeCard = styled.div`
   gap: 24px;
   padding: 40px;
   width: 25.5rem;
-  height: 28.625rem;
   background-color: ${defaultTheme.colors['base-card']};
   border-radius: 6px 44px 6px 44px;
 `
@@ -103,6 +102,10 @@ export const Details = styled.div`
 export const Actions = styled.div`
   display: flex;
   gap: 8px;
+
+  span {
+    text-align: center;
+  }
 `
 
 export const Coffee = styled.img`
@@ -174,7 +177,15 @@ export const PaymentHeader = styled(FormHeaderBase)`
 `
 export const PaymentButtons = styled.div`
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
 `
 
 export const PaymentBox = styled.div`

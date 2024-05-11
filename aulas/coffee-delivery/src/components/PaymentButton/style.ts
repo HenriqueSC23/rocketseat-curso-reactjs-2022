@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { defaultTheme } from '../../styles/themes/default'
 
-export const Container = styled.div`
-  border: none;
+export const Container = styled.label`
+  border: solid 1px transparent;
   background-color: ${defaultTheme.colors['base-button']};
   color: ${defaultTheme.colors['base-text']};
   padding: 1rem;
@@ -24,7 +24,7 @@ export const Container = styled.div`
 
   &[data-state='true'] {
     background-color: ${defaultTheme.colors['purple-light']};
-    border: 1 solid ${defaultTheme.colors.purple};
+    border: 1px solid ${defaultTheme.colors.purple};
   }
 
   input {

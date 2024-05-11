@@ -1,11 +1,11 @@
-import { HTMLAttributes, LegacyRef, forwardRef } from 'react'
+import { InputHTMLAttributes, LegacyRef, forwardRef } from 'react'
 import { Container } from './style'
 
-type Props = HTMLAttributes<HTMLInputElement> & {
-  isSelected?: boolean
+type Props = InputHTMLAttributes<HTMLInputElement> & {
+  isSelected: boolean
 }
 
-export const PaymentButton = forwardRef(function Radio(
+export const PaymentButton = forwardRef(function PaymentButton(
   { children, isSelected, ...rest }: Props,
   ref: LegacyRef<HTMLInputElement>,
 ) {

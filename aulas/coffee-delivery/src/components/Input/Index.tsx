@@ -1,8 +1,10 @@
 import {
+  FocusEvent,
   HTMLAttributes,
   InputHTMLAttributes,
   LegacyRef,
   forwardRef,
+  useState,
 } from 'react'
 import { Container } from './Style'
 
@@ -12,12 +14,33 @@ type Props = InputHTMLAttributes<HTMLInputElement> & {
 }
 
 export const TextInput = forwardRef(function TextInput(
-  { optional, containerProps, ...rest }: Props,
+  { optional, containerProps, onFocus, ...rest }: Props,
   ref: LegacyRef<HTMLInputElement>,
 ) {
+  const [isFocused, setIsFocused] = useState(false)
+
+  function handleFocus(event: FocusEvent<HTMLInputElement, Element>) {
+    setIsFocused(true)
+    onFocus?.(event)
+  }
+
+  function handleBlur(event: FocusEvent<HTMLInputElement, Element>) {
+    setIsFocused(false)
+    onFocus?.(event)
+  }
+
   return (
-    <Container {...containerProps}>
-      <input ref={ref} {...rest} />
+    <Container
+      {...containerProps}
+      data-state={isFocused ? 'fucused' : 'blurred'}
+    >
+      <input
+        type="text"
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        ref={ref}
+        {...rest}
+      />
       {optional ? <span>Opicional</span> : null}
     </Container>
   )
