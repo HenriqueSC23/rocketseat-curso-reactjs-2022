@@ -31,8 +31,8 @@ import {
   SubTotal,
   Total,
 } from './style'
-import { TextInput } from '../../components/Input/Index'
-import { PaymentButton } from '../../components/PaymentButton'
+import { TextInput } from '../../components/Form/Input/Index'
+import { PaymentButton } from '../../components/Form/PaymentButton'
 import americano from '../../assets/coffees/Americano.png'
 import { QuantityInput } from '../../components/Form/QuantityInput'
 

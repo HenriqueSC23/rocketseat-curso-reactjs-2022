@@ -4,6 +4,7 @@ import { defaultTheme } from '../../styles/themes/default'
 export const GridContainer = styled.div`
   display: flex;
   gap: 32px;
+  justify-content: space-between;
   margin: 40px 160px;
 `
 
