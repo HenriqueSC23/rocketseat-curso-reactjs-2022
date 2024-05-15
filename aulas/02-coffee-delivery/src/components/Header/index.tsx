@@ -5,7 +5,7 @@ import {
   CartButton,
   HeaderContainer,
   LocationButton,
-} from './style'
+} from './styles'
 import { Link } from 'react-router-dom'
 
 export function Header() {

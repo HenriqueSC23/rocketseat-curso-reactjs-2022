@@ -4,12 +4,12 @@ export const defaultTheme = {
 
     'yellow-dark': '#C47F17',
     // eslint-disable-next-line prettier/prettier
-  'yellow': '#DBAC2C',
+    'yellow': '#DBAC2C',
     'yellow-light': '#F1E9C9',
 
     'purple-dark': '#4B2995',
     // eslint-disable-next-line prettier/prettier
-  'purple': '#8047F8',
+    'purple': '#8047F8',
     'purple-light': '#EBE5F9',
 
     'base-title': '#272221',
@@ -21,7 +21,7 @@ export const defaultTheme = {
     'base-input': '#EDEDED',
     'base-card': '#F3F2F2',
     // eslint-disable-next-line prettier/prettier
-  'background': '#FAFAFA',
+    'background': '#FAFAFA',
   },
 
   fonts: {

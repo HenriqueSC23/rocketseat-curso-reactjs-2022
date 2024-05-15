@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { defaultTheme } from '../../styles/themes/default'
+import introBackgroundImg from '../../assets/intro-background.png'
 
 export const IntroSession = styled.div`
   display: flex;
@@ -7,6 +8,8 @@ export const IntroSession = styled.div`
   justify-content: space-between;
   padding: 5.75rem 10rem;
   gap: 3.5rem;
+  background: ${() => `url(${introBackgroundImg}) no-repeat center`};
+  background-size: cover;
 `
 
 export const ContentContainer = styled.div`

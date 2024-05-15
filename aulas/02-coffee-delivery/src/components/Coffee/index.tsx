@@ -9,20 +9,22 @@ import {
   Price,
   BuyButton,
   Tags,
-} from './style'
+} from './styles'
 import { QuantityInput } from '../Form/QuantityInput'
 import { ShoppingCartSimple } from '@phosphor-icons/react'
 import { useState } from 'react'
 
+export interface Coffee {
+  id: string
+  title: string
+  description: string
+  tags: string[]
+  price: number
+  image: string
+}
+
 type Props = {
-  coffee: {
-    id: string
-    title: string
-    description: string
-    tags: string[]
-    price: number
-    image: string
-  }
+  coffee: Coffee
 }
 
 export function CoffeeComponent({ coffee }: Props) {

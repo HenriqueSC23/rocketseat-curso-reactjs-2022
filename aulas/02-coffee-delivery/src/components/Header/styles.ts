@@ -5,6 +5,20 @@ export const HeaderContainer = styled.header`
   display: flex;
   padding: 2rem 10rem;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: ${defaultTheme.colors.white};
+
+  a {
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ${defaultTheme.fonts.textS}
+  }
 `
 
 export const ActionContainer = styled.div`
@@ -20,6 +34,7 @@ const BaseButton = styled.button`
   justify-content: center;
   align-items: center;
   padding: 8px;
+  ${defaultTheme.fonts.textS}
 `
 
 export const LocationButton = styled(BaseButton)`

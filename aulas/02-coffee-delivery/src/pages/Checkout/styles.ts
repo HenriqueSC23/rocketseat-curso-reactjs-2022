@@ -114,7 +114,7 @@ export const Coffee = styled.img`
   width: 64px;
 `
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
   width: 40rem;
   display: flex;
   flex-direction: column;

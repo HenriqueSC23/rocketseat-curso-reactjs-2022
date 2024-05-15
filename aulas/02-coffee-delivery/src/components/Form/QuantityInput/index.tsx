@@ -1,5 +1,5 @@
 import { Minus, Plus } from '@phosphor-icons/react'
-import { ContainerQuantity } from './style'
+import { ContainerQuantity } from './styles'
 
 type Props = {
   quantity: number

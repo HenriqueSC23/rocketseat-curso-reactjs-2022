@@ -30,11 +30,12 @@ import {
   RemoveButton,
   SubTotal,
   Total,
-} from './style'
-import { TextInput } from '../../components/Form/Input/Index'
+} from './styles'
+
 import { PaymentButton } from '../../components/Form/PaymentButton'
 import americano from '../../assets/coffees/Americano.png'
 import { QuantityInput } from '../../components/Form/QuantityInput'
+import { TextInput } from '../../components/Form/Input/index'
 
 export function Checkout() {
   const { register, watch } = useForm()
@@ -45,97 +46,95 @@ export function Checkout() {
       <InfoContainer>
         <h2>Complete seu pedido</h2>
         <FormContainer>
-          <form action="">
-            <LocalBox>
-              <LocalHeader>
-                <MapPinLine size={22} />
-                <div>
-                  <h3>Endereço de entrega</h3>
-                  <p>Informe o endereço onde deseja receber seu pedido</p>
-                </div>
-              </LocalHeader>
+          <LocalBox>
+            <LocalHeader>
+              <MapPinLine size={22} />
+              <div>
+                <h3>Endereço de entrega</h3>
+                <p>Informe o endereço onde deseja receber seu pedido</p>
+              </div>
+            </LocalHeader>
 
-              <Form>
-                <TextInput
-                  type="number"
-                  placeholder="CEP"
-                  containerProps={{ style: { gridArea: 'cep' } }}
-                />
-                <TextInput
-                  type="text"
-                  placeholder="Rua"
-                  containerProps={{ style: { gridArea: 'rua' } }}
-                />
-                <TextInput
-                  type="number"
-                  placeholder="Número"
-                  containerProps={{ style: { gridArea: 'numero' } }}
-                />
-                <TextInput
-                  type="text"
-                  placeholder="Complemeneto"
-                  containerProps={{ style: { gridArea: 'complemento' } }}
-                  optional={true}
-                />
-                <TextInput
-                  type="text"
-                  placeholder="Bairro"
-                  containerProps={{ style: { gridArea: 'bairro' } }}
-                />
-                <TextInput
-                  type="text"
-                  placeholder="Cidade"
-                  containerProps={{ style: { gridArea: 'cidade' } }}
-                />
-                <TextInput
-                  type="text"
-                  placeholder="UF"
-                  containerProps={{ style: { gridArea: 'uf' } }}
-                />
-              </Form>
-            </LocalBox>
-            <PaymentBox>
-              <PaymentHeader>
-                <CurrencyDollar size={22} />
-                <div>
-                  <h3>Pagamento</h3>
-                  <p>
-                    O pagamento é feito na entrega. Escolha a forma que deseja
-                    pagar
-                  </p>
-                </div>
-              </PaymentHeader>
+            <Form>
+              <TextInput
+                type="number"
+                placeholder="CEP"
+                containerProps={{ style: { gridArea: 'cep' } }}
+              />
+              <TextInput
+                type="text"
+                placeholder="Rua"
+                containerProps={{ style: { gridArea: 'rua' } }}
+              />
+              <TextInput
+                type="number"
+                placeholder="Número"
+                containerProps={{ style: { gridArea: 'numero' } }}
+              />
+              <TextInput
+                type="text"
+                placeholder="Complemeneto"
+                containerProps={{ style: { gridArea: 'complemento' } }}
+                optional={true}
+              />
+              <TextInput
+                type="text"
+                placeholder="Bairro"
+                containerProps={{ style: { gridArea: 'bairro' } }}
+              />
+              <TextInput
+                type="text"
+                placeholder="Cidade"
+                containerProps={{ style: { gridArea: 'cidade' } }}
+              />
+              <TextInput
+                type="text"
+                placeholder="UF"
+                containerProps={{ style: { gridArea: 'uf' } }}
+              />
+            </Form>
+          </LocalBox>
+          <PaymentBox>
+            <PaymentHeader>
+              <CurrencyDollar size={22} />
+              <div>
+                <h3>Pagamento</h3>
+                <p>
+                  O pagamento é feito na entrega. Escolha a forma que deseja
+                  pagar
+                </p>
+              </div>
+            </PaymentHeader>
 
-              <PaymentButtons>
-                <div>
-                  <PaymentButton
-                    isSelected={selectedPaymentMethod === 'credit'}
-                    {...register('paymentMethod')}
-                    value="credit"
-                  >
-                    <CreditCard size={16} />
-                    <span>cartão de crédito</span>
-                  </PaymentButton>
-                  <PaymentButton
-                    isSelected={selectedPaymentMethod === 'debit'}
-                    {...register('paymentMethod')}
-                    value="debit"
-                  >
-                    <Bank size={16} />
-                    <span>cartão de débito</span>
-                  </PaymentButton>
-                  <PaymentButton
-                    isSelected={selectedPaymentMethod === 'money'}
-                    {...register('paymentMethod')}
-                    value="money"
-                  >
-                    <Money size={16} />
-                    <span>dinheiro</span>
-                  </PaymentButton>
-                </div>
-              </PaymentButtons>
-            </PaymentBox>
-          </form>
+            <PaymentButtons>
+              <div>
+                <PaymentButton
+                  isSelected={selectedPaymentMethod === 'credit'}
+                  {...register('paymentMethod')}
+                  value="credit"
+                >
+                  <CreditCard size={16} />
+                  <span>cartão de crédito</span>
+                </PaymentButton>
+                <PaymentButton
+                  isSelected={selectedPaymentMethod === 'debit'}
+                  {...register('paymentMethod')}
+                  value="debit"
+                >
+                  <Bank size={16} />
+                  <span>cartão de débito</span>
+                </PaymentButton>
+                <PaymentButton
+                  isSelected={selectedPaymentMethod === 'money'}
+                  {...register('paymentMethod')}
+                  value="money"
+                >
+                  <Money size={16} />
+                  <span>dinheiro</span>
+                </PaymentButton>
+              </div>
+            </PaymentButtons>
+          </PaymentBox>
         </FormContainer>
       </InfoContainer>
 

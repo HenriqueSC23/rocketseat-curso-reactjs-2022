@@ -6,7 +6,7 @@ import {
   forwardRef,
   useState,
 } from 'react'
-import { Container } from './Style'
+import { Container } from './styles'
 
 type Props = InputHTMLAttributes<HTMLInputElement> & {
   containerProps?: HTMLAttributes<HTMLDivElement>

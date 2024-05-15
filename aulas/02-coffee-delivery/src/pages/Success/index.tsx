@@ -1,4 +1,4 @@
-import { GridContainer, Order, OrderBox, OrderInfo } from './style'
+import { GridContainer, Order, OrderBox, OrderInfo } from './styles'
 import Biker from '../../assets/Illustration.png'
 import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'

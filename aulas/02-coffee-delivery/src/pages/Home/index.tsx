@@ -5,7 +5,7 @@ import {
   IntroSession,
   ItensContainer,
   TitleContainer,
-} from './style'
+} from './styles'
 import coffeImage from '../../assets/coffee-image.png'
 import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'

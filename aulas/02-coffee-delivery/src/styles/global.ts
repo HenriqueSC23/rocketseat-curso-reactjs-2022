@@ -19,14 +19,12 @@ export const GlobalStyle = createGlobalStyle`
 
   body, input, textarea, button {
     font-family: 'Roboto', 'sans-serif';
-    font-weight: 400;
-    font-size: 1rem;
+    ${(props) => props.theme.fonts.textM}
 
     h1 {
       font-family: 'Baloo 2', 'sans-serif';
-      font-weight: 800;
-      font-size: 1.5rem;
       color: ${(props) => props.theme['base-title']};
+      ${(props) => props.theme.fonts.titleM}
     }
   }
 `
