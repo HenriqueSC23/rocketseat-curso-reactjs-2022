@@ -36,20 +36,6 @@ export const CoffeeCard = styled.div`
   border-radius: 6px 44px 6px 44px;
 `
 
-export const CoffeeCardItem = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  span {
-    ${defaultTheme.fonts.textM}
-    color: ${defaultTheme.colors['base-subtitle']};
-  }
-
-  strong {
-    color: ${defaultTheme.colors['base-text']};
-  }
-`
-
 export const ConfirmBtn = styled.button`
   width: full;
   padding: 12px;
@@ -61,7 +47,12 @@ export const ConfirmBtn = styled.button`
   text-transform: uppercase;
   ${defaultTheme.fonts.buttonG}
 
-  &:hover {
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
     background-color: ${defaultTheme.colors['yellow-dark']};
   }
 `
@@ -86,32 +77,6 @@ export const Total = styled(PriceBase)`
   color: ${defaultTheme.colors['base-subtitle']};
   ${defaultTheme.fonts.textL}
   font-weight: bold;
-`
-
-export const Info = styled.div`
-  display: flex;
-  gap: 20px;
-`
-
-export const Details = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  gap: 8px;
-`
-
-export const Actions = styled.div`
-  display: flex;
-  gap: 8px;
-
-  span {
-    text-align: center;
-  }
-`
-
-export const Coffee = styled.img`
-  height: 64px;
-  width: 64px;
 `
 
 export const FormContainer = styled.form`
@@ -197,33 +162,4 @@ export const PaymentBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`
-
-export const RemoveButton = styled.button`
-  width: 90px;
-  height: 32px;
-  padding: 8px;
-  border: none;
-  border-radius: 6px;
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  justify-content: center;
-  background-color: ${defaultTheme.colors['base-button']};
-  color: ${defaultTheme.colors['base-text']};
-  ${defaultTheme.fonts.buttonM};
-  transition: all 0.2s;
-
-  svg {
-    color: ${defaultTheme.colors.purple};
-  }
-
-  &:hover {
-    background-color: ${defaultTheme.colors['base-hover']};
-    color: ${defaultTheme.colors['base-subtitle']};
-
-    svg {
-      color: ${defaultTheme.colors['purple-dark']};
-    }
-  }
 `

@@ -7,8 +7,11 @@ import {
   LocationButton,
 } from './styles'
 import { Link } from 'react-router-dom'
+import { useCart } from '../../hooks/useCart'
 
 export function Header() {
+  const { cartQuantity } = useCart()
+
   return (
     <HeaderContainer>
       <Link to="/">
@@ -22,7 +25,7 @@ export function Header() {
         <CartButton>
           <Link to="checkout">
             <ShoppingCart size={22} weight="fill" />
-            <span>1</span>
+            {cartQuantity >= 1 && <span>{cartQuantity}</span>}
           </Link>
         </CartButton>
       </ActionContainer>

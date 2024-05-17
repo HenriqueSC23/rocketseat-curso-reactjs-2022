@@ -6,20 +6,15 @@ import {
   CurrencyDollar,
   MapPinLine,
   Money,
-  Trash,
 } from '@phosphor-icons/react'
+
 import {
-  Actions,
-  Coffee,
   CoffeeCard,
-  CoffeeCardItem,
   ConfirmBtn,
-  Details,
   Divider,
   Form,
   FormContainer,
   GridContainer,
-  Info,
   InfoContainer,
   LocalBox,
   LocalHeader,
@@ -27,19 +22,23 @@ import {
   PaymentButtons,
   PaymentHeader,
   Prices,
-  RemoveButton,
   SubTotal,
   Total,
 } from './styles'
 
-import { PaymentButton } from '../../components/Form/PaymentButton'
-import americano from '../../assets/coffees/Americano.png'
-import { QuantityInput } from '../../components/Form/QuantityInput'
 import { TextInput } from '../../components/Form/Input/index'
+import { useCart } from '../../hooks/useCart'
+import { PaymentButton } from '../../components/Form/PaymentButton'
+import { CoffeeCardCheckout } from '../../components/CoffeeCard'
+
+const DELIVERY_PRICE = 3.5
 
 export function Checkout() {
+  const { cartItems, cartItemsTotal, cartQuantity } = useCart()
   const { register, watch } = useForm()
+
   const selectedPaymentMethod = watch('paymentMethod')
+  const cartTotal = DELIVERY_PRICE + cartItemsTotal
 
   return (
     <GridContainer>
@@ -141,62 +140,28 @@ export function Checkout() {
       <InfoContainer>
         <h2>Cafés selecionados</h2>
         <CoffeeCard>
-          <CoffeeCardItem>
-            <Info>
-              <Coffee src={americano} />
-
-              <Details>
-                <span>Expresso Tradicional</span>
-                <Actions>
-                  <QuantityInput />
-                  <RemoveButton>
-                    <Trash size={16} />
-                    REMOVER
-                  </RemoveButton>
-                </Actions>
-              </Details>
-            </Info>
-            <strong>9.90</strong>
-          </CoffeeCardItem>
-
-          <Divider />
-
-          <CoffeeCardItem>
-            <Info>
-              <Coffee src={americano} />
-
-              <Details>
-                <span>Expresso Tradicional</span>
-                <Actions>
-                  <QuantityInput />
-                  <RemoveButton>
-                    <Trash size={16} />
-                    REMOVER
-                  </RemoveButton>
-                </Actions>
-              </Details>
-            </Info>
-            <strong>9.90</strong>
-          </CoffeeCardItem>
+          {cartItems.map((item) => (
+            <CoffeeCardCheckout key={item.id} coffee={item} />
+          ))}
 
           <Divider />
 
           <Prices>
             <SubTotal>
               <p>Total de itens</p>
-              <span>R$19,80</span>
+              <span>R${cartItemsTotal.toFixed(2)}</span>
             </SubTotal>
             <SubTotal>
               <p>Entrega</p>
-              <span>R$5,00</span>
+              <span>R${DELIVERY_PRICE.toFixed(2)}</span>
             </SubTotal>
             <Total>
               <p>Total</p>
-              <span>R$24,80</span>
+              <span>R${cartTotal.toFixed(2)}</span>
             </Total>
           </Prices>
 
-          <ConfirmBtn>confirmar pedido</ConfirmBtn>
+          <ConfirmBtn disabled={cartQuantity <= 0}>confirmar pedido</ConfirmBtn>
         </CoffeeCard>
       </InfoContainer>
     </GridContainer>

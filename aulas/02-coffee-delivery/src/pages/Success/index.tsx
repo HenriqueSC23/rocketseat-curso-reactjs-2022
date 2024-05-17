@@ -22,9 +22,9 @@ export function Success() {
                 style={{ backgroundColor: theme.colors.purple }}
               />
               <span>
-                Entrega em{' '}
-                <strong>Rua João Daniel Martinelli, 102 Farrapos</strong>- Porto
-                Alegre, RS
+                Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+                <br />
+                Farrapos - Porto Alegre, RS
               </span>
             </div>
             <div>
@@ -35,7 +35,8 @@ export function Success() {
                 style={{ backgroundColor: theme.colors.yellow }}
               />
               <span>
-                Previsão de entrega <strong>20 min - 30 min</strong>
+                Previsão de entrega <br />
+                <strong>20 min - 30 min</strong>
               </span>
             </div>
             <div>
@@ -45,7 +46,8 @@ export function Success() {
                 style={{ backgroundColor: theme.colors['yellow-dark'] }}
               />
               <span>
-                Pagamento na entrega <strong>Cartão de Crédito</strong>
+                Pagamento na entrega <br />
+                <strong>Cartão de Crédito</strong>
               </span>
             </div>
           </OrderInfo>
