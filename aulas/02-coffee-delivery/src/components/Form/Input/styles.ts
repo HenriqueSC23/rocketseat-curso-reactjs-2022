@@ -1,6 +1,18 @@
 import styled from 'styled-components'
 import { defaultTheme } from '../../../styles/themes/default'
 
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`
+
+export const ErrorMessage = styled.p`
+  ${defaultTheme.fonts.textXS}
+  font-weight: 400;
+  color: red;
+`
+
 export const Container = styled.div`
   display: flex;
   align-items: center;

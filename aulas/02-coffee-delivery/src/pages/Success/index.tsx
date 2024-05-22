@@ -2,9 +2,27 @@ import { GridContainer, Order, OrderBox, OrderInfo } from './styles'
 import Biker from '../../assets/Illustration.png'
 import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { OrderData } from '../Checkout'
+import { useEffect } from 'react'
+
+interface LocationType {
+  state: OrderData
+}
 
 export function Success() {
   const theme = useTheme()
+  const { state } = useLocation() as unknown as LocationType
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!state) {
+      navigate('/')
+    }
+  }, [navigate, state])
+
+  if (!state) return <></>
 
   return (
     <GridContainer>
@@ -22,9 +40,12 @@ export function Success() {
                 style={{ backgroundColor: theme.colors.purple }}
               />
               <span>
-                Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+                Entrega em{' '}
+                <strong>
+                  {state.street}, {state.number}
+                </strong>
                 <br />
-                Farrapos - Porto Alegre, RS
+                {state.district} - {state.city}, {state.uf}
               </span>
             </div>
             <div>
@@ -47,7 +68,7 @@ export function Success() {
               />
               <span>
                 Pagamento na entrega <br />
-                <strong>Cartão de Crédito</strong>
+                <strong>{state.paymentMethod}</strong>
               </span>
             </div>
           </OrderInfo>
