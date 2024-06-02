@@ -22,7 +22,6 @@ export const SearchFormContainer = styled.form`
     align-items: center;
     gap: 0.75rem;
 
-    border: 0;
     padding: 1rem;
     background-color: transparent;
     border: 1px solid ${props => props.theme["green-300"]};
@@ -33,7 +32,7 @@ export const SearchFormContainer = styled.form`
     &:hover {
       transition: all 0.2s;
       background-color: ${props => props.theme["green-500"]};
-      border: 1px solid ${props => props.theme["green-400"]};
+      border: 1px solid ${props => props.theme["green-500"]};
       color: ${props => props.theme.white};
     }
   }
