@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  background-color: ${props => props.theme["gray-900"]};
+  background: ${props => props.theme["gray-900"]};
   padding: 2.5rem 0 7.5rem;
 `;
 
@@ -12,22 +12,22 @@ export const HeaderContent = styled.div`
   padding: 0 1.5rem;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const NewTransactionButton = styled.button`
-  height: 50px;
-  background-color: ${props => props.theme["green-500"]};
-  color: ${props => props.theme.white};
+  height: 40px;
   border: 0;
+  background: ${props => props.theme["green-500"]};
+  color: ${props => props.theme.white};
+  font-weight: bold;
   padding: 0 1.25rem;
   border-radius: 6px;
-  font-weight: bold;
   cursor: pointer;
 
   &:hover {
-    transition: background-color 0.2s;
-    background-color: ${props => props.theme["green-700"]};
+    transition: 0.2s;
+    background: ${props => props.theme["green-700"]};
   }
 `;
