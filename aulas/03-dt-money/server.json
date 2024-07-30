@@ -39,6 +39,38 @@
       "type": "outcome",
       "createdAt": "2024-07-30T00:50:54.078Z",
       "id": 5
+    },
+    {
+      "category": "Investimentos",
+      "description": "Compra de FII",
+      "price": 500,
+      "type": "outcome",
+      "createdAt": "2024-07-30T10:34:30.799Z",
+      "id": 6
+    },
+    {
+      "category": "Investimentos",
+      "description": "Compra de FII",
+      "price": 500,
+      "type": "outcome",
+      "createdAt": "2024-07-30T10:35:04.404Z",
+      "id": 7
+    },
+    {
+      "category": "Carro",
+      "description": "Compra de carro",
+      "price": 100000,
+      "type": "outcome",
+      "createdAt": "2024-07-30T10:48:34.301Z",
+      "id": 8
+    },
+    {
+      "category": "Bolsa de valores",
+      "description": "Investimento",
+      "price": 200000,
+      "type": "income",
+      "createdAt": "2024-07-30T10:48:56.368Z",
+      "id": 9
     }
   ]
 }
