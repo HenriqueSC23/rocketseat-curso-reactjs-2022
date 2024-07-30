@@ -23,6 +23,22 @@
       "category": "Estudos",
       "price": 5500,
       "createdAt": "2024-07-25T00:30:51.713Z"
+    },
+    {
+      "category": "Trabalho",
+      "description": "Salário",
+      "price": 1500,
+      "type": "income",
+      "createdAt": "2024-07-30T00:30:41.285Z",
+      "id": 4
+    },
+    {
+      "category": "Alimentação",
+      "description": "Bolo de churros",
+      "price": 120,
+      "type": "outcome",
+      "createdAt": "2024-07-30T00:50:54.078Z",
+      "id": 5
     }
   ]
 }
