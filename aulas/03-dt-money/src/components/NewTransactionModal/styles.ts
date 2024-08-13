@@ -16,7 +16,7 @@ export const Content = styled(Dialog.Content)`
   padding: 2.5rem 3rem;
   background: ${(props) => props.theme['gray-800']};
 
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
