@@ -71,6 +71,22 @@
       "type": "income",
       "createdAt": "2024-07-30T10:48:56.368Z",
       "id": 9
+    },
+    {
+      "category": "Investimentos",
+      "description": "Compra de FII",
+      "price": 200,
+      "type": "outcome",
+      "createdAt": "2024-08-13T23:24:12.076Z",
+      "id": 10
+    },
+    {
+      "category": "Trabalho",
+      "description": "Venda site",
+      "price": 230,
+      "type": "income",
+      "createdAt": "2024-08-13T23:24:26.116Z",
+      "id": 11
     }
   ]
 }
