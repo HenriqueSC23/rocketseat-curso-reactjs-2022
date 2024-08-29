@@ -1,4 +1,4 @@
-<h1 align="center"> Ignite Timer </h1>
+<h1 align="center"> DT Money </h1>
 
 <p align="center">
 Programa desenvolvido com base no curso ReactJS da Rocketseat
